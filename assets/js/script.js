@@ -9,19 +9,19 @@ $(document).ready(function() {
 // Funcion para personalizar el color de fondo del navbar
 $(document).scroll( function() {
   const y = $("html").scrollTop();
-    if(y > 700) $('.navbar').addClass("bg-black")
+    if(y > 850) $('.navbar').addClass("bg-black")
     else $('.navbar').removeClass("bg-black")
 });
 
 // Funcion para personalizar la velocidad del scroll al ir a un enlace
-$(function(){
-  $("a").click(function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var href = this.hash;
-      $("html, body").animate({
-        scrollTop: $(href).offset().top
-      }, 1000);
-    }
-  });
+var $root = $('html, body');
+
+$("a").click(function(event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    var href = this.hash;
+    $root.animate({
+      scrollTop: $(href).offset().top
+    }, 1000);
+  }
 });
