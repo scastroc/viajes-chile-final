@@ -16,7 +16,7 @@ $(document).scroll( function() {
 // Funcion para personalizar la velocidad del scroll al ir a un enlace
 var $root = $('html, body');
 
-$("a").click(function(event) {
+$('a').click(function(event) {
   if (this.hash !== "") {
     event.preventDefault();
     var href = this.hash;
